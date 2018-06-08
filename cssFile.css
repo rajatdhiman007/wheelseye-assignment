@@ -1,0 +1,51 @@
+
+		.main-div
+		{
+			position:fixed;
+    		top: 50%;
+			left: 50%;
+			width:30em;
+			height:10em;
+			margin-top: -15em;
+			margin-left: -15em; 
+		}
+		.btn {
+		    background-color: grey;
+		    
+		    color: white;
+		    padding: 0px 5px;
+		    font-size: 16px;
+		    width: 20px;
+		    height: 16px;
+
+		}
+		h5{
+			margin-top: -10px;
+			margin-left: 30px;
+			color: grey;
+		}
+		th{
+			text-align: center;
+		}
+		.td-tbl{
+			font-size: 15px;
+			padding-left: 30px;
+		}
+		.td-input{
+			width: 30px; 
+			height: 25px;
+			margin-left: 30px;
+		}
+		.add-min-div{
+			margin-left: 70px;
+			margin-top: -13px;
+		}
+		.add-btn{
+			margin-top: -20px;
+			position: absolute; 
+		}
+		.subt{
+			float: right;
+			margin-top: -10px;
+			margin-left: -30px;
+		}

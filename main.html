@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Bucket</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "cssFile.css" />
+</head>
+<body style="background-color: #E8E8E8;"  onload="deleterow();">
+	<div class="main-div">
+		<img src="logo.png" style="width: 60%;">
+		<h3 style="color: black;"><b>Your Basket</b></h3>
+			<p style="font-size: 13px; margin-top: -10px;">Items you have added to your basket are shown below.<br>Adjust the quantities or remove items before continuing your purchase</p>
+		<div >
+		<form method="POST" action="">
+			<table id="myTable" style="width: 600px;margin-left: -40px;" cellspacing="2">
+  				<tr>
+    				<th>Product</th>
+    				<th >Price</th>
+    				<th>Qty</th>
+    				<th>Cost</th>
+    			</tr>
+    			<tr>
+	    			<td class="td-tbl" >Cotton T-Shirt,Medium</td>
+	    			<td  >£1.99</td>
+	    			<td>
+	    				<input type='text' class="td-input" value="1" name='qty' id='qty' />	
+	    				<div class="add-min-div" >
+	    					<input class="btn add-btn" type='button'  name='add' onclick='addval1()' value="+"  />
+	    					<input class="btn"  type='button' name='subtract'  onclick='subtractval1()' value="-" />
+	    				</div>
+					</td>		
+					<td style="padding-left: 30px;">
+						<p id="cost1" value="1.99">1.99</p>
+					</td>
+					<td id="drow1">
+						<button  id="r1" name="delete" value="0" onclick='javascript:document.getElementById("r1").setAttribute("value",1);deleterow();'><i class="material-icons">delete</i></button>
+					</td>
+	    		</tr>
+	    		<tr>
+	      			<td class="td-tbl">Baseball Cap,One Size</td>
+	    			<td>£2.99</td>
+	    			<td >
+	    				<input type='text' class="td-input"  value="2" name='qty1' id='qty1' />
+	    				<div class="add-min-div">
+	    					<input class="btn add-btn" type='button'  name='add' onclick="addval2()" value="+"  />
+							<input class="btn"  type='button' name='subtract'  onclick="subtractval2()" value="-" />
+	    				</div>
+					</td>
+					<td style="padding-left: 30px;">
+						<p id="cost2" value="5.98">5.98</p>
+					</td>
+					<td id="drow2">
+						<button  id="r2" name="delete" value="0" onclick='javascript:document.getElementById("r2").setAttribute("value",1);deleterow();'><i class="material-icons">delete</i></button>
+					</td>
+	    		</tr>
+	    		<tr>
+	      			<td class="td-tbl">Swim Shorts, Medium</td>
+	      			<td >£3.99</td>
+	      			<td>
+	    				<input type='text' class="td-input" value="1" name='qty2' id='qty2' />	
+	    				<div class="add-min-div">
+	    					<input class="btn add-btn" type='button'  name='add' onclick='addval3()' value="+"  />
+	    					<input class="btn"  type='button' name='subtract'  onclick='subtractval3()' value="-" />
+	    				</div>
+					</td>
+					<td style="padding-left: 30px;">
+						<p id="cost3" value="3.99">3.99</p>
+					</td>
+					<td id="drow3">
+						<button  id="r3" name="delete" value="0" onclick='javascript:document.getElementById("r3").setAttribute("value",1);deleterow();'><i class="material-icons">delete</i></button>
+					</td>
+    			</tr>
+			</table>
+			<br>
+			<p class="subt" id="subtotal">sub</p>
+			<p style="float: right;" id="VAT">vat</p>
+			<h5 >Subtotal</h5>
+			<h5>VAT @ 20%</h5>
+			<p style="float: right; margin-top: -20px;" id="total">total</p>
+			<h5><b>Total Cost</b></h5>
+			<input style="margin-left:400px;" type="submit" id="simplepost" value="Buy Now>>" >
+		</form>
+		</div>
+	</div>
+	<script src="jsfile.js"></script>
+	<script src="dsend.js"></script>
+</body>
+</html>
